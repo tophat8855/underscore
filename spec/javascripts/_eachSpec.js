@@ -29,3 +29,21 @@ describe('_filter', function() {
     expect(evens).toEqual([2, 4, 6]);
   });
 });
+
+describe('_contains', function() {
+  it ('returns true if value is present in list', function() {
+    array = [1, 2, 3];
+
+    var truthy = _contains(array, 3);
+
+    expect(truthy).toBe(true);
+  });
+
+  it ('returns false if value is not present in list', function() {
+    array = [1, 2, 3];
+
+    var falsey = _contains(array, 4);
+
+    expect(falsey).toBe(false);
+  });
+});
