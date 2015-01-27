@@ -17,3 +17,15 @@ describe('_find', function() {
     expect(even).toEqual(2);
   });
 });
+
+describe('_filter', function() {
+  it ('goes through list and returns array of everything that passes test', function() {
+    array = [1, 2, 3, 4, 5, 6];
+
+    var evens = _filter(array, function(num){
+      return num % 2 === 0;
+    });
+
+    expect(evens).toEqual([2, 4, 6]);
+  });
+});
