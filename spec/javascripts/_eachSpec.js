@@ -47,3 +47,13 @@ describe('_contains', function() {
     expect(falsey).toBe(false);
   });
 });
+
+describe('_max', function() {
+  it ('returns maximum value in list', function() {
+    var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+
+    var result = _max(stooges, function(stooge){ return stooge.age; });
+
+    expect(result).toEqual({name: 'curly', age: 60});
+  });
+});
